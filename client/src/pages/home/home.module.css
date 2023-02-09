@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #015ec5;
+    height: 4.8rem;
+}
+
+.register__link {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+a {
+    display: block;
+}
+
+.carousel {
+    min-width: 123.4rem;
+    max-width: 254rem;
+    position: relative;
+}
+
+.carousel__text__right {
+    margin: -32.9rem 1050px;
+    z-index: 9999;
+    width: 500px;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+
+}
+
+.learnmore {
+    transition-duration: 2s;
+    font-size: 2rem;
+}
+
+.learnmore:hover {
+    color: white;
+    transition-duration: 1s;
+}
+
+.carousel h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.carousel__text__left {
+    margin: -31.9rem 34.3rem;
+    z-index: 9999;
+    width: 500px;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+.carousel__text__left__black {
+    margin: -31.9rem 34.3rem;
+    z-index: 9999;
+    width: 500px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+.bodyimage {
+    max-width: 255.9rem;
+    width: 185.5rem;
+    margin: 1rem 0;
+
+
+}
+
+.bodyimage img {
+    width: 100%;
+
+}
+
+.cards {
+    margin-top: 60rem;
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    width: 48%;
+    font-size: 2.2rem;
+
+
+}
+
+.card p {
+    padding: 1.5rem 0;
+}
+
+.learnMore:hover {
+    color: black;
+    transition-duration: 0.5s;
+}
+
+.card__text {
+    color: #4f4f9f;
+    font-size: 34px;
+    padding-top: 0.2rem;
+}
+
+.news {
+    display: flex;
+    flex-direction: row;
+    width: 1900px;
+}
+
+.news__image {
+    object-fit:cover;
+    width: 49%;
+}
