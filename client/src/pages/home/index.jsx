@@ -131,8 +131,67 @@ const Home = () => {
         </div>
       </div>
       <div className={style.news}>
-        <img className={style.news__image} alt='' src={news2} />
         <img className={style.news__image} alt='' src={news1} />
+        <img className={style.news__image} alt='' src={news2} />
+      </div>
+      <div className={style.hover}>
+        <div className={style.hoverimage}>
+          <div className={style.hoverimage1}></div>
+          <div className={style.hovertext}>
+            <h1>The best fast-paced racing games for the ROG Phone 6</h1>
+            <p>
+              When it comes to high-end mobile gaming, there's truly nothing
+              better than the ROG Phone 6 — but you need great games to go with
+              it.
+            </p>
+          </div>
+        </div>
+        <div className={style.hoverright}>
+          <div className={style.hoverimage2}>
+            <div className={style.hoverimage21}></div>
+            <div className={style.hovertext1}>
+              <h1>The best fast-paced racing games for the ROG Phone 6</h1>
+              <p>
+                When it comes to high-end mobile gaming, there's truly nothing
+                better than the ROG Phone 6 — but you need great games to go
+                with it.
+              </p>
+            </div>
+          </div>
+          <div className={style.hoverimage4}>
+            <div className={style.hoverimage41}></div>
+            <div className={style.hovertext1}>
+              <h1>The best fast-paced racing games for the ROG Phone 6</h1>
+              <p>
+                When it comes to high-end mobile gaming, there's truly nothing
+                better than the ROG Phone 6 — but you need great games to go
+                with it.
+              </p>
+            </div>
+          </div>
+          <div className={style.hoverimage5}>
+            <div className={style.hoverimage51}></div>
+            <div className={style.hovertext1}>
+              <h1>The best fast-paced racing games for the ROG Phone 6</h1>
+              <p>
+                When it comes to high-end mobile gaming, there's truly nothing
+                better than the ROG Phone 6 — but you need great games to go
+                with it.
+              </p>
+            </div>
+          </div>
+          <div className={style.hoverimage6}>
+            <div className={style.hoverimage61}></div>
+            <div className={style.hovertext1}>
+              <h1>The best fast-paced racing games for the ROG Phone 6</h1>
+              <p>
+                When it comes to high-end mobile gaming, there's truly nothing
+                better than the ROG Phone 6 — but you need great games to go
+                with it.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -85,7 +85,7 @@ a {
 
 .bodyimage {
     max-width: 255.9rem;
-    width: 185.5rem;
+    width: 100%;
     margin: 1rem 0;
 
 
@@ -132,10 +132,120 @@ a {
 .news {
     display: flex;
     flex-direction: row;
-    width: 1900px;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .news__image {
-    object-fit:cover;
+    object-fit: cover;
     width: 49%;
+}
+
+.hover {
+    display: flex;
+    justify-content: space-around;
+margin-top: 1rem;
+}
+
+.hoverimage {
+    width: 49%;
+    height: 60rem;
+    border: 1px solid #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+.hoverimage1 {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/hoverimages1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+
+.hoverimage1:hover {
+    transform: scale(1.2);
+}
+
+.hoverimage2,
+.hoverimage4,
+.hoverimage5,
+.hoverimage6 {
+    width: 49%;
+    height: 29rem;
+    border: 1px solid #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+.hoverimage21 , .hoverimage41 , .hoverimage51 , .hoverimage61 {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/hoverimages2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+
+.hoverimage21:hover,
+.hoverimage51:hover,
+.hoverimage41:hover,
+.hoverimage61:hover {
+    transform: scale(1.2);
+}
+
+.hoverright {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.hoverimage41{
+    background-image: url('../../images/hoverimages5.jpg');
+}
+.hoverimage51{
+    background-image: url('../../images/hoverimages3.jpg');
+}
+.hoverimage61{
+    background-image: url('../../images/hoverimages4.jpg');
+}
+.hovertext{
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    padding: 1rem 3rem;
+}
+.hovertext h1{
+    font-size: 2rem;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+}
+.hovertext p{
+    font-size: 1.6rem;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+}
+.hovertext1{
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    padding: .5rem 1.5rem;
+}
+.hovertext1 h1{
+    font-size: 1.8rem;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+}
+.hovertext1 p{
+    font-size: 1.3rem;
+    font-family: 'Heebo', sans-serif;
+    color: white;
 }
