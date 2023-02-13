@@ -1,8 +1,8 @@
 .foot {
-    margin: 3rem auto;
+    margin: 3rem 0;
 
     &er {
-        width: 63rem;
+        width: 100%;
         margin: auto;
         display: flex;
         justify-content: space-around;
@@ -13,7 +13,7 @@
             color: rgb(0, 0, 0);
             transition-duration: 2s;
             border-radius: 50%;
-            width: 3rem;
+            width: 100%;
             height: 3rem;
             cursor: pointer;
         }
@@ -27,14 +27,22 @@
 
     &er__bottom {
         border-top: 1px solid #ccc;
-        width: 100%;
-        padding-left: 30rem;
-        padding-top: 3rem;
         margin: 0;
 
         p {
+            width: 100%;
+            padding-top: 3rem;
+            padding-left: 30rem;
             color: #666;
             font-size: 1.5rem;
+            margin: 0;
         }
     }
+}
+
+@media  (max-width: 475px) {
+    .footer__bottom p {
+        padding-left: 3rem;
+    }
+
 }

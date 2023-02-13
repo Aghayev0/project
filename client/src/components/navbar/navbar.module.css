@@ -16,7 +16,7 @@
   .navbar__top__main {
     display: flex;
     justify-content: space-between;
-    width: 123.6rem;
+    width: 70%;
     margin: auto;
 
   }
@@ -30,7 +30,7 @@
   .navbar__top__images {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 20%;
 
   }
 
@@ -65,13 +65,13 @@
   }
 
   .navbar__modal__width {
-    width: 120.4rem;
+    max-width: 68%;
     display: flex;
     justify-content: flex-end;
     margin: auto;
     position: relative;
   }
- 
+
   .navbarmodal {
     width: 20rem;
     z-index: 999;
@@ -93,7 +93,8 @@
   .navbar__bottom {
     display: flex;
     justify-content: space-between;
-    width: 123.4rem;
+    max-width: 123.4rem;
+    min-width: 69%;
     margin: auto;
     padding: 1rem 0;
     align-items: center;
@@ -116,7 +117,7 @@
   .navbar__bottom__links__p {
     cursor: pointer;
     font-size: 1.3rem;
-margin: 0;
+    margin: 0;
   }
 
   .navbar__bottom__links__p:hover {
@@ -131,7 +132,7 @@ margin: 0;
 
   }
 
-  .navbar__bottom__icons {
+  .navbar__bottom__icons , .navbar__bottom__icons1 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
@@ -141,9 +142,42 @@ margin: 0;
     cursor: pointer;
     font-size: 1.3rem;
   }
-  .navbarmenu{
+
+  .navbarmenu {
     width: 100rem;
     background-color: white;
     height: 10rem;
+
+  }
+
+  .navbar__bottom i {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    .navbar__top {
+      display: none;
+    }
+.navbar__bottom{
+  width: 100%;
+}
+    .navbar__bottom i {
+      display: block;
+      margin-left: 1rem;
+      font-size: 1.6rem;
+    }
+    .navbar__bottom__links{
+      display: none;
+    }
+    .navbar__bottom__icons1 , .navbar__bottom__support{
+      display: none;
+    }
+    .navbar__bottom__right{
+      width: 3rem;
+      margin-top: .3rem;
+    }
+    .modal{
+      display: block;
+    }
     
   }

@@ -1,6 +1,5 @@
 :root {
   --header-height: 3rem;
-  --nav-width: 4.25rem;
   --first-color: #092a85;
   --body-color: #f3f5fa;
   --grey-color: #637381;
@@ -23,7 +22,10 @@
   margin: 0;
   padding: 0;
 }
-
+p{
+  margin: 0;
+  padding: 0;
+}
 body {
   position: relative;
   font-family: var(--body-font);

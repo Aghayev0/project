@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
+html {
+    font-size: 10px;
+}
+
 .register {
     display: flex;
     align-items: center;
@@ -23,23 +27,9 @@ a {
 }
 
 .carousel {
-    min-width: 123.4rem;
+    min-width: 100%;
     max-width: 254rem;
     position: relative;
-}
-
-.carousel__text__right {
-    margin: -32.9rem 1050px;
-    z-index: 9999;
-    width: 500px;
-    color: white;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 20px;
-
 }
 
 .learnmore {
@@ -60,7 +50,7 @@ a {
 .carousel__text__left {
     margin: -31.9rem 34.3rem;
     z-index: 9999;
-    width: 500px;
+    width: 100%;
     color: white;
     text-align: left;
     display: flex;
@@ -73,7 +63,7 @@ a {
 .carousel__text__left__black {
     margin: -31.9rem 34.3rem;
     z-index: 9999;
-    width: 500px;
+    width: 100%;
     color: rgb(0, 0, 0);
     text-align: left;
     display: flex;
@@ -96,26 +86,216 @@ a {
 
 }
 
+.carouselimage1,
+.carouselimage2,
+.carouselimage3,
+.carouselimage4,
+.carouselimage5 {
+    width: 100%;
+    height: 57.7rem;
+    background-image: url('../../images/carouselimage1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carouselimage1 h1 {
+    color: white;
+    text-align: left;
+    width: 100%;
+    color: 2rem;
+    display: block;
+    font-size: 5rem;
+}
+
+.carouselimagewidth {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2.5rem;
+}
+
+.carouselimage1 p {
+    color: white;
+    font-size: 2rem;
+    width: fit-content;
+    /* padding-top: 1rem; */
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    /* padding: 0 .25rem; */
+    /* margin: 0 -.25rem; */
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    color: #54b3d6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.carouselimagewidth p:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.carouselimage2 p {
+    color: white;
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    /* padding-top: 1rem; */
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    /* padding: 0 .25rem; */
+    /* margin: 0 -.25rem; */
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    color: #54b3d6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carouselimagewidth2 p:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.carouselimage1 h3 {
+    color: white;
+    font-size: 3.5rem;
+    width: 60%;
+}
+
+.carouselimage2 h1 {
+    color: white;
+    text-align: left;
+    width: 100%;
+    color: 2rem;
+    display: block;
+    font-size: 5rem;
+}
+
+
+
+.carouselimage2 p {
+    color: white;
+    font-size: 2rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+.carouselimage2 h3 {
+    color: white;
+    font-size: 3.5rem;
+    width: 30%;
+}
+
+.carouselimagewidth2 {
+    width: 90%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2.5rem;
+}
+
+.carouselimage2 {
+    background-image: url('../../images/carouselimage2.jpg');
+}
+
+.carouselimage3 {
+    background-image: url('../../images/imagesfromcarousel.jpg');
+}
+
+.carouselimage5 {
+    background-image: url('../../images/carouselimage5.jpg');
+}
+
 .cards {
-    margin-top: 60rem;
     font-family: 'Heebo', sans-serif;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     row-gap: 20px;
+    margin-top: 1rem;
+    flex-direction: row;
+    width: 100%;
 }
 
-.card {
+.card1,
+.card2,
+.card3,
+.card4 {
     border: 1px solid #e0e0e0;
     text-align: center;
-    width: 48%;
+    width: 49%;
     font-size: 2.2rem;
-
-
+    background-image: url('../../images/noutbookimg1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57.9rem;
 }
 
-.card p {
+.card2 {
+    background-image: url('../../images/noutbookimg2.webp');
+}
+
+.card3 {
+    background-image: url('../../images/noutbookimg3.jpg');
+}
+
+.card4 {
+    background-image: url('../../images/noutbookimg4.jpg');
+}
+
+.card1 {
     padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.card1 img {
+    width: 30%;
+}
+
+.card2 {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.card2 img {
+    width: 30%;
+}
+
+.card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+    row-gap: 2rem;
+}
+
+.card3 img {
+    width: 30%;
+}
+
+.card4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+    row-gap: 2rem;
 }
 
 .learnMore:hover {
@@ -136,15 +316,29 @@ a {
     width: 100%;
 }
 
-.news__image {
-    object-fit: cover;
+.newsimg1 {
     width: 49%;
+    background-image: url('../../images/news1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 57.4rem;
+}
+
+.newsimg2 {
+    width: 49%;
+    background-image: url('../../images/news2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 57.4rem;
 }
 
 .hover {
     display: flex;
     justify-content: space-around;
-margin-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
 }
 
 .hoverimage {
@@ -180,7 +374,10 @@ margin-top: 1rem;
     position: relative;
 }
 
-.hoverimage21 , .hoverimage41 , .hoverimage51 , .hoverimage61 {
+.hoverimage21,
+.hoverimage41,
+.hoverimage51,
+.hoverimage61 {
     width: 100%;
     height: 100%;
     background: url("../../images/hoverimages2.jpg");
@@ -204,48 +401,271 @@ margin-top: 1rem;
     flex-wrap: wrap;
     align-content: space-between;
 }
-.hoverimage41{
+
+.hoverimage41 {
     background-image: url('../../images/hoverimages5.jpg');
 }
-.hoverimage51{
+
+.hoverimage51 {
     background-image: url('../../images/hoverimages3.jpg');
 }
-.hoverimage61{
+
+.hoverimage61 {
     background-image: url('../../images/hoverimages4.jpg');
 }
-.hovertext{
+
+.hovertext {
     position: absolute;
     bottom: 0;
     z-index: 9999;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     width: 100%;
     padding: 1rem 3rem;
 }
-.hovertext h1{
+
+.hovertext h1 {
     font-size: 2rem;
     font-family: 'Heebo', sans-serif;
     color: white;
 }
-.hovertext p{
+
+.hovertext p {
     font-size: 1.6rem;
     font-family: 'Heebo', sans-serif;
     color: white;
 }
-.hovertext1{
+
+.hovertext1 {
     position: absolute;
     bottom: 0;
     z-index: 9999;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     width: 100%;
     padding: .5rem 1.5rem;
 }
-.hovertext1 h1{
+
+
+.hovertext1 h1 {
     font-size: 1.8rem;
     font-family: 'Heebo', sans-serif;
     color: white;
 }
-.hovertext1 p{
+
+.hovertext1 p {
     font-size: 1.3rem;
     font-family: 'Heebo', sans-serif;
     color: white;
+}
+
+@media screen and (max-width: 1023px) {
+    .carouselimage1 {
+        height: 45rem;
+        background-image: url('../../images/carouselimage13.jpg');
+
+    }
+
+
+    .carouselimage2 {
+        background-image: url('../../images/carouselimage14.jpg');
+    }
+
+    .carouselimagewidth {
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .carouselimagewidth h1 {
+        width: fit-content;
+        font-size: 3rem;
+    }
+
+    .carouselimagewidth h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .carouselimagewidth2 {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 3rem;
+    }
+
+    .carouselimagewidth2 h1 {
+        width: fit-content;
+        font-size: 3rem;
+    }
+
+    .carouselimagewidth2 h3 {
+        font-size: 3rem;
+        text-align: left;
+        width: 70%;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+        height: 46rem;
+        row-gap: 0;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .home_hover {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    html {
+        font-size: 7px;
+    }
+
+    .carouselimagewidth,
+    .carouselimagewidth2 {
+        row-gap: 0;
+        padding-top: 5rem;
+    }
+
+    .carouselimage1 {
+        background-size: fill;
+        background-image: url('../../images/carouselimage13.jpg');
+    }
+
+    .carouselimage1 h1 {
+        font-size: 10px;
+    }
+
+    .carouselimage1 h3 {
+        font-size: 10px;
+    }
+
+    .carouselimage1 p {
+        font-size: 10px;
+    }
+
+    .carouselimage2 h1 {
+        font-size: 10px;
+    }
+
+    .carouselimage2 h3 {
+        font-size: 10px;
+    }
+
+    .carouselimage2 p {
+        font-size: 10px;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+        width: 100%;
+        height: 300px;
+    }
+
+    .news {
+        flex-direction: column;
+
+    }
+
+    .newsimg1,
+    .newsimg2 {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .card1 p {
+        font-size: 1.2rem;
+    }
+
+    .card1 a {
+        font-size: 1.2rem;
+    }
+
+    .card1 img {
+        width: 80%;
+    }
+
+    .card2 p {
+        font-size: 1.2rem;
+    }
+
+    .card2 a {
+        font-size: 1.2rem;
+    }
+
+    .card2 img {
+        width: 80%;
+    }
+
+    .card3 p {
+        font-size: 1.2rem;
+    }
+
+    .card3 a {
+        font-size: 1.2rem;
+    }
+
+    .card3 img {
+        width: 80%;
+    }
+
+    .card4 p {
+        font-size: 1.2rem;
+    }
+
+    .card4 a {
+        font-size: 1.2rem;
+    }
+
+    .card4 h1 {
+        font-size: 1.2rem;
+
+    }
+
+    .hover {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .hoverimage,
+    .hoverimage1 {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .hovertext h1,
+    .hovertext p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .hoverright {
+        width: 100%;
+
+    }
+ .hoverimage2 , .hoverimage3 , .hoverimage4 {
+    height: 150px;
+} 
+    .hovertext1 h1,
+    .hovertext1 p {
+        font-size: 1rem;
+    }
+
 }

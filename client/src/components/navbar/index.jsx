@@ -10,6 +10,7 @@ import asusLogoActive from "../../images/pngwing.com.png";
 import style from "../navbar/navbar.module.css";
 import searchIcon from "../../images/icon.svg";
 import userIcon from "../../images/icons.svg";
+import "./navbar.scss";
 import { useState } from "react";
 const Navbar = () => {
   const [image1, setImage1] = useState(logo1);
@@ -58,7 +59,7 @@ const Navbar = () => {
           </div>
         </div>
         {isModalOpen && (
-          <div  className={style.navbar__modal__width}>
+          <div className={style.navbar__modal__width}>
             <div
               className={style.navbarmodal}
               onMouseOver={() => setIsModalOpen(true)}
@@ -71,7 +72,13 @@ const Navbar = () => {
             </div>
           </div>
         )}
+
         <div className={style.navbar__bottom}>
+          <i
+            data-bs-toggle='modal'
+            data-bs-target='#exampleModal'
+            class='fa-solid fa-bars'
+          ></i>
           <div>
             <img
               className={style.navbar__bottom__logo}
@@ -82,59 +89,22 @@ const Navbar = () => {
             />
           </div>
           <div className={style.navbar__bottom__links}>
-            <p
-              onMouseOver={() => {
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
-              Mobile
-            </p>
-            <p
-              onMouseOver={() => {
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
-              Laptops
-            </p>
-            <p
-              onMouseOver={() =>{
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
-              Display / Destkops
-            </p>
-            <p
-              onMouseOver={() => {
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
+            <p className={style.navbar__bottom__links__p}>Mobile</p>
+            <p className={style.navbar__bottom__links__p}>Laptops</p>
+            <p className={style.navbar__bottom__links__p}>Display / Destkops</p>
+            <p className={style.navbar__bottom__links__p}>
               MotherBoards / Components
             </p>
-            <p
-              onMouseOver={() => {
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
+            <p className={style.navbar__bottom__links__p}>
               Networking / IoT / Servers
             </p>
-            <p
-              onMouseOver={() => {
-                setIsModalOpen1(true);
-              }}
-              className={style.navbar__bottom__links__p}
-            >
-              Accesories
-            </p>
+            <p className={style.navbar__bottom__links__p}>Accesories</p>
           </div>
+
           <div className={style.navbar__bottom__right}>
             <p className={style.navbar__bottom__support}>Support</p>
             <img
-              className={style.navbar__bottom__icons}
+              className={style.navbar__bottom__icons1}
               alt='yoxdu'
               src={userIcon}
             />
@@ -146,6 +116,49 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <div
+        class='modal fade'
+        id='exampleModal'
+        tabindex='-1'
+        aria-labelledby='exampleModalLabel'
+        aria-hidden='true'
+      >
+        <div class='modal-dialog' style={{margin:'0'}}>
+          <div class='modal-content'>
+            <div class='modal-header'>
+              <button
+                type='button'
+                class='btn-close'
+                data-bs-dismiss='modal'
+                aria-label='Close'
+              ></button>
+            </div>
+            <div class='modal-body'>
+              <p className={style.navbar__bottom__links__p}>Mobile</p>
+              <p className={style.navbar__bottom__links__p}>Laptops</p>
+              <p className={style.navbar__bottom__links__p}>
+                Display / Destkops
+              </p>
+              <p className={style.navbar__bottom__links__p}>
+                MotherBoards / Components
+              </p>
+              <p className={style.navbar__bottom__links__p}>
+                Networking / IoT / Servers
+              </p>
+              <p className={style.navbar__bottom__links__p}>Accesories</p>
+            </div>
+            <div className='modal-body1'>
+              <p className='support'>Support</p>
+              <div>
+                <img className='usericon' alt='yoxdu' src={userIcon} />
+                <p>My Account</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {isModalOpen1 && (
         <div
           className={style.navbarmenu}
