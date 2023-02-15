@@ -12,6 +12,7 @@ import Sales from "../pages/admin/pages/Sales";
 import Settings from "../pages/admin/pages/Settings";
 import SingleProduct from "../pages/admin/pages/SingleProduct";
 import Users from "../pages/admin/pages/Users";
+import Category from "../pages/category";
 import Home from "../pages/home";
 import Root from "../pages/root";
 
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "/categories",
+        element: <Category />,
       },
     ],
   },
