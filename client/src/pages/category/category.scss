@@ -1,6 +1,7 @@
 .categorycarousel {
     width: 100%;
-height: 100vh;
+    height: 100vh;
+
     .carouselimg1 {
         background-image: url('../../images/mobilecarousel1.jpg');
         background-position: center;
@@ -9,12 +10,70 @@ height: 100vh;
         width: 100%;
         height: 100vh;
     }
-       .carouselimg2 {
+
+    .carouselimg2 {
         background-image: url('../../images/mobilecarousel2.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-         width: 100%;
+        width: 100%;
         height: 100vh;
+    }
+}
+
+.categoryimg {
+    width: 100%;
+    margin-top: 5px;
+    background-color: white;
+
+    &__mid {
+        width: 20%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            width: 176px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            p {
+                font-size: 16px;
+
+            }
+        }
+    }
+}
+
+.categories {
+    width: 100%;
+
+    &__left {
+        width: 300px;
+        height: 670px;
+        background-color: white;
+        color: black;
+
+        h5 {
+            font-size: 20px;
+        }
+
+        div {
+            font-size: 16px;
+            display: flex;
+
+        }
     }
 }

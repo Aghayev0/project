@@ -1,5 +1,8 @@
 import React from "react";
-import './category.scss'
+import "./category.scss";
+import categoryImg1 from "../../images/img1.webp";
+import categoryImg2 from "../../images/img2.webp";
+import categoryImg3 from "../../images/img3.webp";
 const Category = () => {
   return (
     <div>
@@ -48,6 +51,49 @@ const Category = () => {
             <span class='visually-hidden'>Next</span>
           </button>
         </div>
+      </div>
+      <div className='categoryimg'>
+        <div className='categoryimg__mid'>
+          <div>
+            <img alt='' src={categoryImg1} />
+            <p>All Series</p>
+          </div>
+          <div>
+            <img alt='' src={categoryImg2} />
+            <p>Zenfone</p>
+          </div>
+          <div>
+            <img alt='' src={categoryImg3} />
+            <p>ROG Phone</p>
+          </div>
+        </div>
+      </div>
+      <div className='categories'>
+        <div className='categories__left'>
+          <h5>By Brands</h5>
+          <div>
+            <input type='checkbox' />
+            <p>Zenfone</p>
+          </div>
+          <div>
+            <input type='checkbox' />
+            <p>ROG Phone</p>
+          </div>
+          <h5>CPU</h5>
+          <div>
+            <input type='checkbox' />
+            <p>MediaTek Dimensity 9000+</p>
+          </div>
+          <div>
+            <input type='checkbox' />
+            <p>Qualcomm Snapdragon 8+ Gen 1</p>
+          </div>
+          <div>
+            <input type='checkbox' />
+            <p>Qualcomm Snapdragon 888 Plus</p>
+          </div>
+        </div>
+        <div className='categories__right'></div>
       </div>
     </div>
   );

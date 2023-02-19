@@ -1,5 +1,5 @@
 :root {
-  --header-height: 3rem;
+  --header-height: 48px;
   --first-color: #092a85;
   --body-color: #f3f5fa;
   --grey-color: #637381;
@@ -11,7 +11,7 @@
   --blue-color: #265df1;
   --red-color: #ef5b5b;
   --body-font: "Nunito", sans-serif;
-  --normal-font-size: 1rem;
+  --normal-font-size: 16px;
   --z-fixed: 100;
 }
 

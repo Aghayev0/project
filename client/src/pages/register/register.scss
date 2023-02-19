@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.reg {
+    background-color: #f3f3f3;
+    width: 100%;
+    height: 840px;
+
+    &__box {
+        width: 1000px;
+        height: 820px;
+        margin: 7rem auto 70px;
+        background-color: white;
+        display: flex;
+
+        &__left {
+            width: 45%;
+            height: 790px;
+            margin: 20px;
+            padding: 20px 50px 0 50px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-content: flex-start;
+            border-right: 1px solid #ccc;
+            row-gap: 20px;
+
+            &__1 {
+                width: 280px;
+                margin: auto;
+            }
+
+            &__2 {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: black;
+                }
+
+                p {
+                    font-size: 19px;
+                    color: black;
+                }
+            }
+
+            &__3 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 5px;
+
+                img {
+                    width: 28px;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: #333333;
+                }
+            }
+
+            &__ {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 240px;
+            }
+        }
+
+        &__right {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+
+            .singupnow {
+                display: flex;
+                justify-content: center;
+                width: 419px;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 20px;
+                column-gap: 10px;
+
+                h5 {
+                    font-size: 17px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    color: black;
+                    margin: 0;
+
+                }
+
+                a {
+                    font-size: 17px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    display: block;
+                }
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 600;
+                font-family: 'Roboto', sans-serif;
+                color: black;
+                padding: 20px;
+            }
+
+            &__form {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    .label {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 17px;
+                        width: 419px;
+                        text-align: left;
+                        margin: auto;
+                    }
+
+                    .input {
+                        width: 419px;
+                        height: 48px;
+                        margin: auto;
+                        font-size: 16px;
+                        padding-left: 5px;
+                    }
+
+                    .error {
+                        color: red;
+                        width: 419px;
+                        margin: auto;
+                        font-size: 16px;
+                    }
+
+                    .submitBtn {
+                        color: white;
+                        font-family: 'Roboto', sans-serif;
+                        background-color: #006ce1;
+                        width: 419px;
+                        height: 48px;
+                        margin: auto;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 15px;
+
+                        &:hover {
+                            background-color: #004085;
+                            transition-duration: 500ms;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

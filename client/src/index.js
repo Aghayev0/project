@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { router } from "./routes";
+import './pages/admin/pages/admin.scss'
 import { RouterProvider } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'

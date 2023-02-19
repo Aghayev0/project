@@ -14,6 +14,9 @@ import SingleProduct from "../pages/admin/pages/SingleProduct";
 import Users from "../pages/admin/pages/Users";
 import Category from "../pages/category";
 import Home from "../pages/home";
+import Laptop from "../pages/laptop";
+import Login1 from "../pages/login";
+import Registration from "../pages/register";
 import Root from "../pages/root";
 
 export const router = createBrowserRouter([
@@ -28,6 +31,18 @@ export const router = createBrowserRouter([
       {
         path: "/categories",
         element: <Category />,
+      },
+      {
+        path: "/laptops",
+        element: <Laptop />,
+      },
+      {
+        path: "/user/register",
+        element: <Registration />,
+      },
+      {
+        path: "/user/login",
+        element: <Login1 />,
       },
     ],
   },

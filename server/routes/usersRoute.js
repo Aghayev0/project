@@ -81,7 +81,7 @@ router.post('/login', async (req, res) => {
 
 // GET USER INFORMATION
 
-router.post('/get-user-info', authMiddleware, async (req, res) => {
+router.post('/get-user-info',  async (req, res) => {
     try {
         const user = await User.findById(req.body.userId);
         res.send({

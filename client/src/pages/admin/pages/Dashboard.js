@@ -1,13 +1,12 @@
-import React from 'react'
-
+import * as React from 'react';
 const Dashboard = () => {
   return (
     <>
-    <div className='page__main'>
+      <div className='page__main'>
         <h1> This is a Dashboard</h1>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
