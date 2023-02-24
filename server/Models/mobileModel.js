@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const laptopSchema = new mongoose.Schema(
+const mobileSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -21,34 +21,19 @@ const laptopSchema = new mongoose.Schema(
         type: String,
         required: true,
     },
-    cpu:{
+    battery:{
         type: String,
         required: true,
     },
-    gpu:{
-        type: String,
-        required: true,
-    }
-    ,
-    Ram:{
-        type: String,
-        required: true,
-    }
-    ,
-    Windows:{
-        type: String,
-        required: true,
-    }
-    ,
-    guarantee:{
-        type: String,
-        required: true,
-    },
-    description:{
-        type: String,
-        required: true,
+    camera:{
+        type:String,
+        require:true,
     },
     display:{
+        type: String,
+        required: true,
+    },
+    cpu:{
         type: String,
         required: true,
     }
@@ -57,6 +42,6 @@ const laptopSchema = new mongoose.Schema(
 );
 
 // const laptopModel = mongoose.model("laptops",laptopSchema);
-const laptopModel = mongoose.model('laptops',laptopSchema)
+const mobileModel = mongoose.model('mobiles',mobileSchema)
 
-module.exports = laptopModel;
+module.exports = mobileModel;

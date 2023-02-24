@@ -43,3 +43,30 @@
         font-size: 16px;
     }
 }
+.addp{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 455px;
+    div{
+        color: red;
+        margin: 0 10px;
+    }
+    input{
+        border: 1px solid #ccc;
+        width: 300px;
+        margin: 10px;
+    }
+    label{
+        margin: 10px;
+    }
+    button{
+        border: none;
+        color: black;
+        background-color: #e8e5e5;
+        width: 100px;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+}

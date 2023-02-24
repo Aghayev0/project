@@ -9,6 +9,7 @@ import asusLogo from "../../images/asus__logo.png";
 import asusLogoActive from "../../images/pngwing.com.png";
 import style from "../navbar/navbar.module.css";
 import searchIcon from "../../images/icon.svg";
+import { Link } from "react-router-dom";
 import userIcon from "../../images/icons.svg";
 import "./navbar.scss";
 import { useState } from "react";
@@ -58,21 +59,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {isModalOpen && (
-          <div className={style.navbar__modal__width}>
-            <div
-              className={style.navbarmodal}
-              onMouseOver={() => setIsModalOpen(true)}
-              onMouseOut={() => setIsModalOpen(false)}
-            >
-              <p className={style.navbarmodal__links}>
-                ROG - Republic Of Gamers
-              </p>
-              <p className={style.navbarmodal__links}>TUF Gaming</p>
-            </div>
-          </div>
-        )}
-
         <div className={style.navbar__bottom}>
           <i
             data-bs-toggle='modal'
@@ -89,16 +75,12 @@ const Navbar = () => {
             />
           </div>
           <div className={style.navbar__bottom__links}>
-            <p className={style.navbar__bottom__links__p}>Mobile</p>
-            <p className={style.navbar__bottom__links__p}>Laptops</p>
-            <p className={style.navbar__bottom__links__p}>Display / Destkops</p>
-            <p className={style.navbar__bottom__links__p}>
-              MotherBoards / Components
-            </p>
-            <p className={style.navbar__bottom__links__p}>
-              Networking / IoT / Servers
-            </p>
-            <p className={style.navbar__bottom__links__p}>Accesories</p>
+            <Link to='/mobile'>
+              <p className={style.navbar__bottom__links__p}>Mobile</p>
+            </Link>
+            <Link to='/laptops'>
+              <p className={style.navbar__bottom__links__p}>Laptops</p>
+            </Link>
           </div>
 
           <div className={style.navbar__bottom__right}>
@@ -124,7 +106,7 @@ const Navbar = () => {
         aria-labelledby='exampleModalLabel'
         aria-hidden='true'
       >
-        <div class='modal-dialog' style={{margin:'0'}}>
+        <div class='modal-dialog' style={{ margin: "0" }}>
           <div class='modal-content'>
             <div class='modal-header'>
               <button

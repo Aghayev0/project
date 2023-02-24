@@ -1,0 +1,30 @@
+.detail {
+    max-width: 1200px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+
+    &img {
+        width: 500px;
+
+    }
+
+    &s {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 50px;
+        height: 300px;
+        margin: 93px auto;
+
+       &p {
+            width: 300px;
+        }
+        span{
+            color: black;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import categoryImg1 from "../../images/laptopcatimg1.png";
 import categoryImg2 from "../../images/laptopcatimg2.png";
 import categoryImg3 from "../../images/laptopcatimg3.png";
 import categoryImg4 from "../../images/laptopcatimg4.png";
 import categoryImg5 from "../../images/laptopcatimg5.png";
 import img1 from "../../images/proart1.png";
-import img2 from "../../images/proart11.png";
-import img3 from "../../images/proart12.png";
-import img4 from "../../images/zenbook1.png";
-import img5 from "../../images/zenbook2.png";
-import img6 from "../../images/zenbook3.png";
-import img7 from "../../images/vivobook1.png";
-import img8 from "../../images/vivobook2.png";
-import img9 from "../../images/vivobook3.png";
-import img10 from "../../images/chromebook1.png";
-import img11 from "../../images/chromebook2.png";
-import img12 from "../../images/chromebook3.png";
+import { Link } from "react-router-dom";
 import "./laptop.scss";
+import axios from "axios";
 const Laptop = () => {
+  const [laptops, SetLaptops] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5522/api/laptops/get")
+      .then((res) => SetLaptops(res.data));
+  }, []);
   return (
     <div>
       <div>
@@ -103,23 +100,34 @@ const Laptop = () => {
         <div className='categoryimg'>
           <div className='categoryimg__mid1'>
             <div>
-              <img alt='' src={categoryImg1} />
+              <Link to=''>
+                <img alt='' src={categoryImg1} />
+              </Link>
+
               <p>All Series</p>
             </div>
             <div>
-              <img alt='' src={categoryImg2} />
+              <Link to='/proart'>
+                <img alt='' src={categoryImg2} />
+              </Link>
               <p>ProArt StudioBook</p>
             </div>
             <div>
-              <img alt='' src={categoryImg3} />
+              <Link to='/zenbook'>
+                <img alt='' src={categoryImg3} />
+              </Link>
               <p>ZenBook</p>
             </div>
             <div>
-              <img alt='' src={categoryImg4} />
+              <Link to='/vivobook'>
+                <img alt='' src={categoryImg4} />
+              </Link>
               <p>Vivobook</p>
             </div>
             <div>
-              <img alt='' src={categoryImg5} />
+              <Link to='/chromebook'>
+                <img alt='' src={categoryImg5} />
+              </Link>
               <p>Chromebook</p>
             </div>
           </div>
@@ -134,36 +142,23 @@ const Laptop = () => {
             </p>
             <div>
               <div className='laptops__pro__cards'>
-                <div className='laptops__pro__cards__card'>
-                  <h1>ProArt Studiobook PRO</h1>
-                  <img src={img1} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>ProArt Studiobook S</h1>
-                  <img src={img2} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>ProArt Studiobook</h1>
-                  <img src={img3} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
+                {laptops &&
+                  laptops
+                    .filter((item) => item.name.includes("ProArt"))
+                    .map((data) => (
+                      <div className='laptops__pro__cards__card'>
+                        <h1>ProArt Studiobook PRO</h1>
+                        <img src={img1} alt='' />
+                        <p>
+                          The best laptop for creative users, it's stylish with
+                          state-of-the art components, the best processors and
+                          fast graphics to express your creativity anywhere.
+                        </p>
+                        <Link to='/proart'>
+                          <button>See All</button>
+                        </Link>
+                      </div>
+                    ))}
               </div>
             </div>
           </div>
@@ -176,35 +171,19 @@ const Laptop = () => {
             </p>
             <div>
               <div className='laptops__pro__cards'>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Zenbook</h1>
-                  <img src={img4} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Zenbook PRO</h1>
-                  <img src={img5} alt='' />
-                  <p>
-                    Elegant, trendy, thin and light, it's the best laptop for
-                    on-the-go work and entertainment.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Zenbook FLIP</h1>
-                  <img src={img6} alt='' />
-                  <p>
-                    The best and most versatile 2-in-1 convertible, featuring a
-                    360°-flippable display and stylus support that let you sail
-                    through any task with style and ease.
-                  </p>
-                  <button>See All</button>
-                </div>
+                {laptops &&
+                  laptops
+                    .filter((item) => item.name.includes("Zenbook"))
+                    .map((data) => (
+                      <div className='laptops__pro__cards__card'>
+                        <h1>{data.name}</h1>
+                        <img src={data.image} alt='' />
+                        <p>{data.title}</p>
+                        <Link to='/zenbook'>
+                          <button>See All</button>
+                        </Link>
+                      </div>
+                    ))}
               </div>
             </div>
           </div>
@@ -217,36 +196,19 @@ const Laptop = () => {
             </p>
             <div>
               <div className='laptops__pro__cards'>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Vivobook S</h1>
-                  <img src={img7} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Vivobook FLIP</h1>
-                  <img src={img8} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Vivobook SLIM</h1>
-                  <img src={img9} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
+                {laptops &&
+                  laptops
+                    .filter((item) => item.name.includes("Vivobook"))
+                    .map((data) => (
+                      <div className='laptops__pro__cards__card'>
+                        <h1>{data.name}</h1>
+                        <img src={data.image} alt='' />
+                        <p>{data.title}</p>
+                        <Link to='/vivobook'>
+                          <button>See All</button>
+                        </Link>
+                      </div>
+                    ))}
               </div>
             </div>
           </div>
@@ -259,36 +221,19 @@ const Laptop = () => {
             </p>
             <div>
               <div className='laptops__pro__cards'>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Chromebook FLIP</h1>
-                  <img src={img10} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>Chromeboo Detachable</h1>
-                  <img src={img11} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
-                <div className='laptops__pro__cards__card'>
-                  <h1>ChromeBook VIBE</h1>
-                  <img src={img12} alt='' />
-                  <p>
-                    The best laptop for creative users, it's stylish with
-                    state-of-the art components, the best processors and fast
-                    graphics to express your creativity anywhere.
-                  </p>
-                  <button>See All</button>
-                </div>
+                {laptops &&
+                  laptops
+                    .filter((item) => item.name.includes("Chromebook"))
+                    .map((data) => (
+                      <div className='laptops__pro__cards__card'>
+                        <h1>{data.name}</h1>
+                        <img src={data.image} alt='' />
+                        <p>{data.title}</p>
+                        <Link to='/chromebook'>
+                          <button>See All</button>
+                        </Link>
+                      </div>
+                    ))}
               </div>
             </div>
           </div>

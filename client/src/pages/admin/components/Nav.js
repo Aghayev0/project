@@ -36,15 +36,15 @@ const Nav = ({ children }) => {
       key: 3,
     },
     {
-      url: "deliveries",
-      i_class: "bx bxs-truck ",
-      link_title: "Deliveries",
+      url: "AddPhone",
+      i_class: "bx bx-plus ",
+      link_title: "AddPhone",
       key: 4,
     },
     {
-      url: "messages",
-      i_class: "bx bxs-message-dots ",
-      link_title: "Messages",
+      url: "AddLaptop",
+      i_class: "bx bx-plus ",
+      link_title: "Add",
       key: 5,
     },
     {

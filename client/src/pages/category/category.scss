@@ -56,24 +56,3 @@
         }
     }
 }
-
-.categories {
-    width: 100%;
-
-    &__left {
-        width: 300px;
-        height: 670px;
-        background-color: white;
-        color: black;
-
-        h5 {
-            font-size: 20px;
-        }
-
-        div {
-            font-size: 16px;
-            display: flex;
-
-        }
-    }
-}
