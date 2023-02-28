@@ -15,14 +15,17 @@ import Users from "../pages/admin/pages/Users";
 import Category from "../pages/category";
 import Chrome from "../pages/chromebook";
 import Detail from "../pages/detail";
+import Phonedetail from "../pages/detail/phonedetail";
 import Home from "../pages/home";
 import Laptop from "../pages/laptop";
 import Login1 from "../pages/login";
 import Pro from "../pages/pro";
 import Registration from "../pages/register";
+import ROG from "../pages/Rogphone";
 import Root from "../pages/root";
 import Vivo from "../pages/vivobook";
 import Zenbook from "../pages/zenbook";
+import Zenfone from "../pages/zenfone";
 
 export const router = createBrowserRouter([
   {
@@ -54,12 +57,24 @@ export const router = createBrowserRouter([
         element: <Pro />,
       },
       {
+        path: "/zenfone",
+        element: <Zenfone />,
+      },
+      {
+        path: "/rogphone",
+        element: <ROG />,
+      },
+      {
         path: "/laptops",
         element: <Laptop />,
       },
       {
         path: "/details/:_id",
         element: <Detail />,
+      },
+      {
+        path: "/phonedetails/:_id",
+        element: <Phonedetail />,
       },
       {
         path: "/user/register",

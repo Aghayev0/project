@@ -4,10 +4,11 @@ router.get('/get/' , async (req,res)=>{
     let mobile = await mobilemodel.find({})
     res.send(mobile)
 })
-router.get('/get/' , async (req,res)=>{
-    let mobile = await mobilemodel.find({})
-    res.send(mobile)
-})
+router.delete('/delete/:id' , async (req,res)=>{
+    let { id } = req.params
+    let deletemobile = await mobilemodel.findByIdAndDelete(id)
+    res.send(deletemobile)
+    })
 router.get("/get/:id", async (req, res) => {
     let { id } = req.params;
     let mobilee = await mobilemodel.findById(id);

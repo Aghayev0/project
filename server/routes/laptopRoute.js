@@ -13,6 +13,11 @@ router.get("/get/:id", async (req, res) => {
     let laptopp = await laptopModel.findById(id);
     res.send(laptopp);
   });
+  router.delete('/delete/:id' , async (req,res)=>{
+    let { id } = req.params
+    let deletedlaptop = await laptopModel.findByIdAndDelete(id)
+    res.send(deletedlaptop)
+    })
 router.post('/post' , async (req,res)=>{
 let newLaptop = laptopModel({...req.body})
 await newLaptop.save()

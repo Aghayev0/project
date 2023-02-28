@@ -9,7 +9,7 @@ const Home = () => {
   return (
       <div>
         <div className={style.register}>
-          <Link to='/' className={style.register__link}>
+          <Link to='/user/register' className={style.register__link}>
             Create an ASUS account today to register your product for better
             support.
           </Link>
@@ -84,28 +84,28 @@ const Home = () => {
           <div className={style.card1}>
             <img alt='' src={laptopLabel1} />
             <p>Born for Creative Pros in 3D</p>
-            <Link className={style.learnMore} to=''>
+            <Link className={style.learnMore} to='/proart'>
               Learn More
             </Link>
           </div>
           <div className={style.card2}>
             <img alt='' src={laptopLabel2} />
             <p>Born for Creative Pros in 3D</p>
-            <Link className={style.learnMore} to=''>
+            <Link className={style.learnMore} to='/vivobook'>
               Learn More
             </Link>
           </div>
           <div className={style.card3}>
             <img alt='' src={laptopLabel3} />
             <p>Born for Creative Pros in 3D</p>
-            <Link className={style.learnMore} to=''>
+            <Link className={style.learnMore} to='/chromebook'>
               Learn More
             </Link>
           </div>
           <div className={style.card4}>
             <h1 className={style.card__text}>ASUS Chromebook CM14</h1>
             <p>Born for Creative Pros in 3D</p>
-            <Link className={style.learnMore} to=''>
+            <Link className={style.learnMore} to='/chromebook'>
               Learn More
             </Link>
           </div>

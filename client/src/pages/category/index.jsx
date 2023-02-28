@@ -3,7 +3,6 @@ import "./category.scss";
 import categoryImg1 from "../../images/img1.webp";
 import categoryImg2 from "../../images/img2.webp";
 import categoryImg3 from "../../images/img3.webp";
-import img1 from "../../images/zenfone1.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -65,19 +64,19 @@ const Category = () => {
       <div className='categoryimg'>
         <div className='categoryimg__mid'>
           <div>
-            <Link to='mobile'>
+            <Link to=''>
               <img alt='' src={categoryImg1} />
             </Link>
             <p>All Series</p>
           </div>
           <div>
-            <Link to='mobile'>
+            <Link to='/zenfone'>
               <img alt='' src={categoryImg2} />
             </Link>
             <p>Zenfone</p>
           </div>
           <div>
-            <Link to='mobile'>
+            <Link to='/rogphone'>
               <img alt='' src={categoryImg3} />
             </Link>
             <p>ROG Phone</p>
@@ -103,7 +102,7 @@ const Category = () => {
                       <h1>{data.name}</h1>
                       <img src={data.image} alt='' />
                       <p>{data.title}</p>
-                      <Link to='/proart'>
+                      <Link to='/zenfone'>
                         <button>See All</button>
                       </Link>
                     </div>
@@ -131,7 +130,7 @@ const Category = () => {
                       <h1>{data.name}</h1>
                       <img src={data.image} alt='' />
                       <p>{data.title}</p>
-                      <Link to='/zenbook'>
+                      <Link to='/rogphone'>
                         <button>See All</button>
                       </Link>
                     </div>

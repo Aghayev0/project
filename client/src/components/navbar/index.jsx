@@ -9,16 +9,17 @@ import asusLogo from "../../images/asus__logo.png";
 import asusLogoActive from "../../images/pngwing.com.png";
 import style from "../navbar/navbar.module.css";
 import searchIcon from "../../images/icon.svg";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import userIcon from "../../images/icons.svg";
 import "./navbar.scss";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const { user } = useSelector((state) => state.users);
   const [image1, setImage1] = useState(logo1);
   const [image2, setImage2] = useState(logo2);
   const [image3, setImage3] = useState(logo3);
   const [image4, setImage4] = useState(asusLogo);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   return (
     <React.Fragment>
@@ -50,7 +51,6 @@ const Navbar = () => {
             </div>
             <div className={style.navbar__top__links}>
               <p
-                onMouseOver={() => setIsModalOpen(true)}
                 className={style.navbar__top__link}
               >
                 Gaming
@@ -66,6 +66,7 @@ const Navbar = () => {
             class='fa-solid fa-bars'
           ></i>
           <div>
+          <Link to='/'>
             <img
               className={style.navbar__bottom__logo}
               alt='yoxdu'
@@ -73,6 +74,8 @@ const Navbar = () => {
               onMouseOver={() => setImage4(asusLogoActive)}
               onMouseOut={() => setImage4(asusLogo)}
             />
+          </Link>
+            
           </div>
           <div className={style.navbar__bottom__links}>
             <Link to='/mobile'>
@@ -84,13 +87,20 @@ const Navbar = () => {
           </div>
 
           <div className={style.navbar__bottom__right}>
-            <p className={style.navbar__bottom__support}>Support</p>
+            <p className={style.navbar__bottom__support}>{user?.name}</p>
             <img
               className={style.navbar__bottom__icons1}
               alt='yoxdu'
               src={userIcon}
+              onClick={() => {
+                console.log(user)
+              }}
             />
             <img
+              onClick={() => {
+                console.log(localStorage("token"))
+                Navigate("/");
+              }}
               className={style.navbar__bottom__icons}
               alt='yoxdu'
               src={searchIcon}
@@ -117,24 +127,21 @@ const Navbar = () => {
               ></button>
             </div>
             <div class='modal-body'>
-              <p className={style.navbar__bottom__links__p}>Mobile</p>
-              <p className={style.navbar__bottom__links__p}>Laptops</p>
-              <p className={style.navbar__bottom__links__p}>
-                Display / Destkops
-              </p>
-              <p className={style.navbar__bottom__links__p}>
-                MotherBoards / Components
-              </p>
-              <p className={style.navbar__bottom__links__p}>
-                Networking / IoT / Servers
-              </p>
-              <p className={style.navbar__bottom__links__p}>Accesories</p>
+              <Link to='/mobile'>
+                {" "}
+                <p className={style.navbar__bottom__links__p}>Mobile</p>
+              </Link>
+              <Link to='/laptops'>
+                <p className={style.navbar__bottom__links__p}>Laptops</p>
+              </Link>
             </div>
             <div className='modal-body1'>
               <p className='support'>Support</p>
               <div>
                 <img className='usericon' alt='yoxdu' src={userIcon} />
-                <p>My Account</p>
+                <Link to='/user/register'>
+                  <p>My Account</p>
+                </Link>
               </div>
             </div>
           </div>

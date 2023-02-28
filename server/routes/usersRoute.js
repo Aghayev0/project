@@ -77,7 +77,10 @@ router.post('/login', async (req, res) => {
     }
 
 })
-
+router.get('/get' , async (req,res)=>{
+    let user = await User.find({})
+    res.send(user)
+})
 
 // GET USER INFORMATION
 

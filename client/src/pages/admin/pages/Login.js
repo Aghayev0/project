@@ -11,17 +11,17 @@ const token = checkToken();
 
 const navigate = useNavigate()
 
-const initialState = { email: "test@asus.com", password: "asus12345" };
+const initialState = { email: "emin@asus.com", password: "asus12345" };
 const [userData, setUserData] = useState(initialState);
 const { email, password } = userData;
 
 const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target.value;
     setUserData({ ...userData, [name]: value });   
 }
 
 const handleSubmit = () => {
-    if (userData.email === "test@asus.com" && userData.password === "asus12345") {
+    if (userData.email === "emin@asus.com" && userData.password === "asus12345") {
         login();
     } else {
         alert("Wrong Credentials");
@@ -48,11 +48,11 @@ useEffect(() => {
                     </div>
 
                     <div className="form-floating">
-                        <input type="email" className="form-control" onChange={handleInputChange} name="email" value={email} />
+                        <input type="email" className="form-control"  name="email"  />
                         <label htmlFor="floatingInput">Email address</label>
                     </div>
                     <div className="form-floating">
-                        <input type="password" className="form-control" onChange={handleInputChange} name="password" value={password} />
+                        <input type="password" className="form-control"  name="password"  />
                         <label htmlFor="floatingPassword">Password</label>
                     </div>
 

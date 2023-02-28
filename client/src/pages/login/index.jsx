@@ -11,8 +11,13 @@ import registerIcon4 from "../../images/login_icon_04.svg";
 import registerIcon5 from "../../images/login_icon_05.svg";
 import registerIcon6 from "../../images/login_icon_06.svg";
 import { useFormik } from "formik";
+import { message } from 'antd'
+import { loginUser } from '../../apicalls/users';
+import { useDispatch } from 'react-redux'
+import { ShowLoading, HideLoading } from '../../redux/loaderSlice/index'
 import imgLogin from '../../images/asus__logo.png'
 const Login1 = () => {
+  const dispatch = useDispatch()
     const formik = useFormik({
       initialValues: {
         email: "",
@@ -25,11 +30,27 @@ const Login1 = () => {
           .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
       }),
-      onSubmit: (values) => {
+      onSubmit: async (values) => {
         axios.post('http://localhost:8080/api/users/login',values).then(() => alert("Logined Successfully"));
-        formik.resetForm();
+        try {
+          dispatch(ShowLoading())
+          const response = await loginUser(values)
+          dispatch(HideLoading())
+          if (response.success) {
+            message.success(response.message)
+            localStorage.setItem('token', response.data)
+            window.location.href = "/";
+          } else {
+            message.error(response.message);
+          }
+        } catch (error) {
+          dispatch(HideLoading())
+          message.error(error.message);
+        }
+        formik.resetForm()
       },
-    });
+      },
+    )
   return (
     <div className='reg'>
       <div className='reg__box'>
